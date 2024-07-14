@@ -48,3 +48,7 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Screen Short Mobile Application
+  ![logingPage](https://github.com/user-attachments/assets/97c132f0-d267-486b-bd3a-2a2509e816a8)
+
