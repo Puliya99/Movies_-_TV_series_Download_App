@@ -1,6 +1,6 @@
 import { Link } from "expo-router";
 import React, { useState } from "react";
-import { StyleSheet, Text, View, SafeAreaView, TextInput, Image, TouchableOpacity, Button } from "react-native";
+import { StyleSheet, Text, View, Button, SafeAreaView, TextInput, Image, TouchableOpacity } from "react-native";
 
 export default function LoginScreen() {
   const [username, setUsername] = useState('');
@@ -9,9 +9,6 @@ export default function LoginScreen() {
   return (
     <View style={styles.container}>
       <Image source={require("@/assets/images/baiscope.png")} style={styles.logo} />
-      
-      <Text style={styles.welcomeText}>Welcome back</Text>
-      <Text style={styles.signInText}>Sign in to continue</Text>
 
       <SafeAreaView>
         <TextInput
@@ -22,7 +19,14 @@ export default function LoginScreen() {
         />
         <TextInput
           style={styles.input}
-          placeholder="Password"
+          placeholder="New Password"
+          onChangeText={setPassword}
+          secureTextEntry
+          value={password}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Confirm Password"
           onChangeText={setPassword}
           secureTextEntry
           value={password}
@@ -36,14 +40,6 @@ export default function LoginScreen() {
           color="#841584"
         />
       </View>
-
-      <Link href="/forget">
-        <Text style={styles.forgotPasswordText}>Forget password?</Text>
-      </Link>
-
-      <TouchableOpacity onPress={() => alert('Register')}>
-        <Text style={styles.registerText}>Don't have an account yet? Register</Text>
-      </TouchableOpacity>
     </View>
   );
 }
@@ -62,19 +58,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginBottom: 20,
   },
-  welcomeText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 10,
-    color: 'white',
-  },
-  signInText: {
-    fontSize: 18,
-    textAlign: 'center',
-    marginBottom: 20,
-    color: 'gray',
-  },
   input: {
     height: 40,
     width: 270,
@@ -84,16 +67,6 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     backgroundColor: 'white',
-  },
-  forgotPasswordText: {
-    textAlign: 'center',
-    color: '#00008b',
-    marginTop: 10,
-  },
-  registerText: {
-    textAlign: 'center',
-    color: '#00008b',
-    marginTop: 20,
   },
   loginButton: {
     marginTop: 10,
