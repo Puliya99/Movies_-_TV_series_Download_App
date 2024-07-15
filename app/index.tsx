@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, SafeAreaView, TextInput, Image, TouchableOpacity, Button } from "react-native";
 
 export default function LoginScreen() {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
@@ -16,9 +16,9 @@ export default function LoginScreen() {
       <SafeAreaView>
         <TextInput
           style={styles.input}
-          placeholder="User Name"
-          onChangeText={setUsername}
-          value={username}
+          placeholder="Email"
+          onChangeText={setEmail}
+          value={email}
         />
         <TextInput
           style={styles.input}
@@ -33,7 +33,7 @@ export default function LoginScreen() {
         <Button
           onPress={() => alert('Login')}
           title="LOGIN"
-          color="#841584"
+          color="#C82F2D"
         />
       </View>
 
@@ -41,9 +41,12 @@ export default function LoginScreen() {
         <Text style={styles.forgotPasswordText}>Forget password?</Text>
       </Link>
 
-      <TouchableOpacity onPress={() => alert('Register')}>
-        <Text style={styles.registerText}>Don't have an account yet? Register</Text>
-      </TouchableOpacity>
+      <Text style={styles.loginPrompt}>
+        Don't have an account yet?
+        <Link href={"/register"}>
+          <Text style={styles.registerText}> Register</Text>
+        </Link>
+      </Text>
     </View>
   );
 }
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
     width: 200,
     height: 124,
     alignSelf: 'center',
-    marginBottom: 20,
+    marginBottom: 75,
   },
   welcomeText: {
     fontSize: 24,
@@ -89,6 +92,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#00008b',
     marginTop: 10,
+  },
+  loginPrompt: {
+    textAlign: 'center',
+    marginTop: 20,
+    color: '#555',
   },
   registerText: {
     textAlign: 'center',

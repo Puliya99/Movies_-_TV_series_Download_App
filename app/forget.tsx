@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, Button, SafeAreaView, TextInput, Image, TouchableOpacity } from "react-native";
 
 export default function LoginScreen() {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -13,9 +14,9 @@ export default function LoginScreen() {
       <SafeAreaView>
         <TextInput
           style={styles.input}
-          placeholder="User Name"
-          onChangeText={setUsername}
-          value={username}
+          placeholder="Email"
+          onChangeText={setEmail}
+          value={email}
         />
         <TextInput
           style={styles.input}
@@ -27,9 +28,9 @@ export default function LoginScreen() {
         <TextInput
           style={styles.input}
           placeholder="Confirm Password"
-          onChangeText={setPassword}
+          onChangeText={setConfirmPassword}
           secureTextEntry
-          value={password}
+          value={confirmPassword}
         />
       </SafeAreaView>
 
@@ -37,7 +38,7 @@ export default function LoginScreen() {
         <Button
           onPress={() => alert('Login')}
           title="LOGIN"
-          color="#841584"
+          color="#C82F2D"
         />
       </View>
     </View>
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     width: 200,
     height: 124,
     alignSelf: 'center',
-    marginBottom: 20,
+    marginBottom: 75,
   },
   input: {
     height: 40,
