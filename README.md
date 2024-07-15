@@ -50,8 +50,11 @@ Join our community of developers creating universal apps.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
 
 ## Screen Short Mobile Application
-![logingPage](https://github.com/user-attachments/assets/6ff3f0c1-80e0-42f7-a5c4-97339a1f0a5b)
-![forgetPage](https://github.com/user-attachments/assets/8c82aa29-cf11-40af-bf9b-63aee8d5eb48)
+
+![logingPage](https://github.com/user-attachments/assets/86b289e8-88b0-4646-b36c-9a1f3dbe4d9b)
+![forgetPassword](https://github.com/user-attachments/assets/210c5b7d-c10e-4c94-8257-7656af241133)
+![registerPage](https://github.com/user-attachments/assets/5e3c7ac0-924d-46f4-9c7b-9be596074871)
+
 
 
 
