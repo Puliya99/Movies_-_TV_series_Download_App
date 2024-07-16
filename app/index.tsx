@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, SafeAreaView, TextInput, Image, TouchableOpacity, Button } from "react-native";
 
@@ -31,7 +31,7 @@ export default function LoginScreen() {
 
       <View style={styles.loginButton}>
         <Button
-          onPress={() => alert('Login')}
+          onPress={() => router.push('/home')}
           title="LOGIN"
           color="#C82F2D"
         />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, CheckBox, Image } from "react-native";
+import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, Image } from "react-native";
 import { Link } from "expo-router";
 
 export default function RegisterScreen() {
@@ -7,8 +7,7 @@ export default function RegisterScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [termsAccepted, setTermsAccepted] = useState(false);
-
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Register</Text>

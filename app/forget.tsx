@@ -1,8 +1,8 @@
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Button, SafeAreaView, TextInput, Image, TouchableOpacity } from "react-native";
 
-export default function LoginScreen() {
+export default function ForgetScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -36,7 +36,7 @@ export default function LoginScreen() {
 
       <View style={styles.loginButton}>
         <Button
-          onPress={() => alert('Login')}
+          onPress={() => router.push('/home')}
           title="LOGIN"
           color="#C82F2D"
         />
