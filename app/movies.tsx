@@ -42,7 +42,7 @@ const LanguageScreen = () => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#ffffff',
+      backgroundColor: '#151515',
     },
     grid: {
       flexDirection: 'row',

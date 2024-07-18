@@ -55,9 +55,5 @@ Join our community of developers creating universal apps.
 ![forgetPassword](https://github.com/user-attachments/assets/210c5b7d-c10e-4c94-8257-7656af241133)
 ![registerPage](https://github.com/user-attachments/assets/5e3c7ac0-924d-46f4-9c7b-9be596074871)
 ![homePage](https://github.com/user-attachments/assets/330e343d-2b8c-4897-b094-df50ad7bda6f)
-![categoryPage](https://github.com/user-attachments/assets/c4fbac72-a544-4d12-b5b0-b0796fedeb70)
-
-
-
-
-
+![categoryPage](https://github.com/user-attachments/assets/0898b843-b331-44f1-828a-e6f1b75cb024)
+![englishPage](https://github.com/user-attachments/assets/b20bbee6-34ce-47dc-9c9c-53f471dfa466)
