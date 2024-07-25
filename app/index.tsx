@@ -31,7 +31,7 @@ export default function LoginScreen() {
 
       <View style={styles.loginButton}>
         <Button
-          onPress={() => router.push('/home')}
+          onPress={() => router.push('/(drawer)/home')}
           title="LOGIN"
           color="#C82F2D"
         />

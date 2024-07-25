@@ -25,7 +25,7 @@ const movies = {
     ],
   },
   Tv_Series: {
-    route: '/Tv_Series',
+    route: '/tvSeries',
     data: [
       { title: "හවුස් ඔෆ් ද ඩ්‍රගන් [S02: E05] | රජවුණු ඒමන්ඩ් (18+)", image: require('@/assets/images/english/HOD.jpg') },
       { title: "MIRZAPUR [S03 : E01] | අවි ගත්තෝ අවියෙන්ම නසී ..", image: require('@/assets/images/hindi/Mirzapur.jpg') },
@@ -35,7 +35,7 @@ const movies = {
     ],
   },
   Animation: {
-    route: '/Animation',
+    route: '/animation',
     data: [
       { title: "The Boy and the Heron (2023) | කෙසේද ඔබ දිවි ගෙවන්නෙ?", image: require('@/assets/images/japanese/The-Boy-Heron-2023.jpg') },
       { title: "ULTRAMAN: RISING (2024) | ”යුතුකමකට එහා ගිය වගකීම”", image: require('@/assets/images/english/Ultraman-Rising-2024.jpg') },
@@ -45,7 +45,7 @@ const movies = {
     ],
   },
   Animation_Series: {
-    route: '/Animation_Series',
+    route: '/animationSeires',
     data: [
       { title: "BERSERK (1997) [S01 : E05 & E06] | දෛවයේ ලියවුනු යක්ෂයා", image: require('@/assets/images/japanese/Berserk-1997-1998.jpg') },
       { title: "THE ELUSIVE SAMURAI [S01 : E01] | ෂෝගුනේට් හී බිඳවැටීම", image: require('@/assets/images/japanese/The-Elusive-Samurai-S01-2.jpg') },
@@ -55,7 +55,7 @@ const movies = {
     ],
   },
   WWE: {
-    route: '/WWE',
+    route: '/wwe',
     data: [
       { title: "WWE RAW 2024/06/17", image: require('@/assets/images/wwe/20240617_RAW.jpg') },
       { title: "WWE RAW 2024/06/10", image: require('@/assets/images/wwe/20240603_RAW.jpg') },
