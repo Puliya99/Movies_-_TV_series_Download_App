@@ -85,7 +85,7 @@ const movies = [
   },
 ];
 
-const LanguageScreen = () => {
+const EnglishMovieScreen = () => {
   const handlePress = (url) => {
     Linking.openURL(url);
   };
@@ -151,4 +151,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LanguageScreen;
+export default EnglishMovieScreen;

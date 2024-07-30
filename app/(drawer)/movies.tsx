@@ -3,22 +3,22 @@ import React from 'react';
 import { ScrollView, View, Text, StyleSheet } from 'react-native';
 
 const languages = [
-  { name: 'English', color: '#0000FF', route: 'english' },
-  { name: 'Hindi', color: '#FFA500', route: '/hindi' },
-  { name: 'Tamil', color: '#FF4500', route: '/tamil' },
-  { name: 'Korean', color: '#FF69B4', route: '/korean' },
-  { name: 'Kannada', color: '#FFB6C1', route: '/kannada' },
-  { name: 'Telugu', color: '#DDA0DD', route: '/telugu' },
-  { name: 'Malayalam', color: '#0B1F3B', route: '/malayalam' },
-  { name: 'Japanese', color: '#32CD32', route: '/japanese' },
-  { name: 'Other Lang', color: '#000000', route: '/other-lang' },
-  { name: 'Horror', color: '#8B0000', route: '/horror' },
-  { name: 'Action', color: '#FF6347', route: '/action' },
-  { name: 'Romantic', color: '#FF1493', route: '/romantic' },
-  { name: 'Thriller', color: '#4B0082', route: '/thriller' },
-  { name: 'Comic', color: '#FFD700', route: '/comic' },
-  { name: 'Comedy', color: '#00FFFF', route: '/comedy' },
-  { name: 'Crime', color: '#696969', route: '/crime' },
+  { name: 'English', color: '#0000FF', route: 'movies/english' },
+  { name: 'Hindi', color: '#FFA500', route: 'hindi' },
+  { name: 'Tamil', color: '#FF4500', route: 'tamil' },
+  { name: 'Korean', color: '#FF69B4', route: 'korean' },
+  { name: 'Kannada', color: '#FFB6C1', route: 'kannada' },
+  { name: 'Telugu', color: '#DDA0DD', route: 'telugu' },
+  { name: 'Malayalam', color: '#0B1F3B', route: 'malayalam' },
+  { name: 'Japanese', color: '#32CD32', route: 'japanese' },
+  { name: 'Other Lang', color: '#000000', route: 'other-lang' },
+  { name: 'Horror', color: '#8B0000', route: 'horror' },
+  { name: 'Action', color: '#FF6347', route: 'action' },
+  { name: 'Romantic', color: '#FF1493', route: 'romantic' },
+  { name: 'Thriller', color: '#4B0082', route: 'thriller' },
+  { name: 'Comic', color: '#FFD700', route: 'comic' },
+  { name: 'Comedy', color: '#00FFFF', route: 'comedy' },
+  { name: 'Crime', color: '#696969', route: 'crime' },
 ];
 
 const MovieScreen = () => {
