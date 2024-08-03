@@ -1,13 +1,29 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, Text, View, TextInput, Button, Image } from "react-native";
 import { Link } from "expo-router";
+import { auth } from '../FirebaseConfig';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 export default function RegisterScreen() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  
+
+  const signUp = async () => {
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      alert('SignUp Success');
+    } catch (error) {
+      alert('Invalid Data');
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Register</Text>
@@ -44,7 +60,7 @@ export default function RegisterScreen() {
 
       <Button
         title="REGISTER"
-        onPress={() => alert('Register')}
+        onPress={signUp}
         color="#C82F2D"
       />
 
@@ -88,10 +104,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: 'white',
   },
-  termsText: {
-    color: '#00008b',
-    marginLeft: 5,
-  },
   loginPrompt: {
     textAlign: 'center',
     marginTop: 20,
@@ -101,4 +113,3 @@ const styles = StyleSheet.create({
     color: '#00008b',
   },
 });
-

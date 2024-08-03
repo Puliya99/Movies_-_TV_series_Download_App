@@ -1,11 +1,23 @@
 import { Link, router } from "expo-router";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, SafeAreaView, TextInput, Image, TouchableOpacity, Button } from "react-native";
+import {auth} from '.././FirebaseConfig';
+import {signInWithEmailAndPassword} from 'firebase/auth';
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const signIn=async()=>{
+    try{
+      const user =await signInWithEmailAndPassword(auth,email,password)
+      if(user)router.push('/(drawer)/home')
+    }catch(error:any){
+      alert('Invalid Data')
+    }
+  }
+
+  
   return (
     <View style={styles.container}>
       <Image source={require("@/assets/images/baiscope.png")} style={styles.logo} />
@@ -31,7 +43,7 @@ export default function LoginScreen() {
 
       <View style={styles.loginButton}>
         <Button
-          onPress={() => router.push('/(drawer)/home')}
+          onPress={signIn}
           title="LOGIN"
           color="#C82F2D"
         />

@@ -1,10 +1,49 @@
+import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
+import { Alert } from 'react-native';
 import { Drawer } from 'expo-router/drawer';
+import { useRouter } from 'expo-router';
+
+function CustomDrawerContent(props) {
+  const router = useRouter();
+
+  const handleLogout = () => {
+    Alert.alert(
+      "Are you sure you want to logout?",
+      "",
+      [
+        {
+          text: "CANCEL",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { 
+          text: "LOGOUT", 
+          onPress: () => {
+            console.log("Logout Pressed");
+            router.push('/');
+          } 
+        }
+      ]
+    );
+  };
+
+  return (
+    <DrawerContentScrollView {...props}>
+      <DrawerItemList {...props} />
+      <DrawerItem
+        label="Logout"
+        onPress={handleLogout}
+      />
+    </DrawerContentScrollView>
+  );
+}
 
 export default function Layout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <Drawer>
+      <Drawer drawerContent={(props) => <CustomDrawerContent {...props} />}>
         <Drawer.Screen
           name="home"
           options={{
@@ -46,7 +85,7 @@ export default function Layout() {
           }}
         />
         <Drawer.Screen
-          name="animationSeires"
+          name="animationSeries"
           options={{
             headerStyle: { backgroundColor: '#309483' },
             headerTintColor: '#fff',
@@ -63,16 +102,6 @@ export default function Layout() {
             headerTitleStyle: { fontWeight: 'bold' },
             drawerLabel: 'WWE',
             title: 'WWE',
-          }}
-        />
-        <Drawer.Screen
-          name="logout"
-          options={{
-            headerStyle: { backgroundColor: '#309483' },
-            headerTintColor: '#fff',
-            headerTitleStyle: { fontWeight: 'bold' },
-            drawerLabel: 'Logout',
-            title: 'Logout',
           }}
         />
       </Drawer>

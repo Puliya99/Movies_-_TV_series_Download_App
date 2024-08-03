@@ -85,7 +85,7 @@ const movies = [
   },
 ];
 
-const EnglishMovieScreen = () => {
+const LatestScreen = () => {
   const handlePress = (url) => {
     Linking.openURL(url);
   };
@@ -151,4 +151,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EnglishMovieScreen;
+export default LatestScreen;

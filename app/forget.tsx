@@ -36,7 +36,7 @@ export default function ForgetScreen() {
 
       <View style={styles.loginButton}>
         <Button
-          onPress={() => router.push('/home')}
+          onPress={() => router.push('/')}
           title="LOGIN"
           color="#C82F2D"
         />
